@@ -1,3 +1,18 @@
+# HOME AUTOMATION APPLICATION
+
+To run this application, simply follow the steps below:
+1. Extract the zip file and navigate to the extracted location/project folder in the terminal.
+2. Run the following commands:
+> npm install - To install node dependencies and libraries referenced by this project
+####
+> npm start - To launch the application in a browser
+####
+> npm test - For running basic test cases to make sure the App renders without crashing, allows to Resgister and displays Thermostat data
+##
+3. To view the app on mobile device, host the website on laptop and navigate to http://<local ip of laptop>:3000 on your mobile device. Make sure that both the devices are connected to the same wifi and the network connection does not block the website you are trying to host
+4. APP IMAGES folder in the root directory has images of the App captured on mobile device.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

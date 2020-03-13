@@ -1,0 +1,282 @@
+.thermostat-data-container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 2px #ccc;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.thermostat-readings-container {
+  display: flex;
+  justify-content: center;
+}
+
+.desired-temperature-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desired-temperature-parent > div:nth-child(2) > label {
+  margin: 10px;
+  transform: rotate(270deg);
+}
+
+.desired-temperature-parent > div:nth-child(2) > span {
+  margin-top: 15px;
+}
+
+.desired-temperature-parent > div:nth-child(2) {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.thermostat-state-container, 
+.thermostat-inside-temp-container,
+.thermostat-outside-temp-container {
+  width: 25%;
+}
+
+.thermostat-state-container, 
+.thermostat-inside-temp-container,
+.thermostat-outside-temp-container,
+.desired-temperature-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 10px;
+}
+
+.second-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.switch-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch-field > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-field > div > label {
+  margin: 10px;
+}
+
+.switch-field > div > input {
+  margin: 12px auto;
+  cursor: pointer;
+}
+
+h1 {
+  color: white; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: 400; 
+  line-height: 50px; 
+  letter-spacing: 1px; 
+  padding: 0 0 40px; 
+  border-bottom: double #ddd;
+}
+
+h4 {
+  font-family: 'Helvetica Neue', sans-serif; 
+  margin: 5px 0;
+  padding: 0 0 10px; 
+}
+
+.auto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auto-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+}
+
+.auto-container > div:first-child {
+  display: flex;
+}
+
+.auto-container > div > span {
+    margin: 5px;
+}
+
+.slider-container {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 50px;
+  }
+  
+  .slider-container input {
+    display:none;
+  }
+  
+  .slider-dot {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider-dot:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+  }
+  
+  input:checked + .slider-dot {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider-dot:before {
+    transform: translateX(26px);
+  }
+  
+  .slider-dot.round {
+    border-radius: 34px;
+  }
+  
+  .slider-dot.round:before {
+    border-radius: 50%;
+  }
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  .thermostat-data-container {
+    width: 50%;
+  }
+  .thermostat-state-container > div, 
+  .thermostat-inside-temp-container > div,
+  .thermostat-outside-temp-container > div {
+    font-size: 35px;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) {
+  .thermostat-data-container {
+    width: 65%;
+  }
+  .thermostat-state-container > div, 
+  .thermostat-inside-temp-container > div,
+  .thermostat-outside-temp-container > div {
+    font-size: 30px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .thermostat-data-container {
+    width: 80%;
+  }
+
+  h1 {
+    /* font-size: 26px;  */
+    padding: 0 0 8px; 
+  }
+
+  h4 {
+    margin: 3px 0;
+    padding: 0 0 5px; 
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .thermostat-data-container {
+    width: 70%;
+  }
+
+  h1 {
+    /* font-size: 26px;  */
+    padding: 0 0 8px; 
+  }
+
+  h4 {
+    margin: 3px 0;
+    padding: 0 0 5px; 
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .thermostat-data-container {
+    width: 90%;
+  }
+
+  h1 {
+    /* font-size: 20px;  */
+    padding: 0 0 5px; 
+  }
+
+  h4 {
+    margin: 2px 0;
+    padding: 0 0 2px; 
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .thermostat-data-container {
+    width: 95%;
+  }
+
+  h1 {
+    padding: 0 0 5px; 
+  }
+
+  h4 {
+    margin: 2px 0;
+    padding: 0 0 2px; 
+  }
+}
+  
