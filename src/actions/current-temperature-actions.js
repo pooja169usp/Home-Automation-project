@@ -53,7 +53,7 @@ export function showCurrentTemperatureOutside(temperature) {
 }
 
 export function getURL(sensorSlug) {
-    var baseURL = sensorSlug === 'inside-1' ? "http://api-staging.paritygo.com/sensors/api/sensors/indoor-1/?begin=" : "http://api-staging.paritygo.com/sensors/api/sensors/outdoor-1/?begin="
+    var baseURL = sensorSlug === 'inside-1' ? "https://api-staging.paritygo.com/sensors/api/sensors/indoor-1/?begin=" : "https://api-staging.paritygo.com/sensors/api/sensors/outdoor-1/?begin="
     var now = new Date();
     var beginTime = new Date(new Date().getTime() - now.getTimezoneOffset() * 60000 - (15 * 60000)).toISOString();
     var endTime = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString();
